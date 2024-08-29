@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button (click)="goToHomePage()">Back To Homepage</button>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Brand</th>
+            <th>Color</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Netprice</th>
+        </tr>
+        <tr *ngFor="let n of mob">
+            <td>{{n.id}}</td>
+            <td>{{n.brand}}</td>
+            <td>{{n.color}}</td>
+            <td>{{n.price}}</td>
+            <td>{{n.discount}}</td>
+            <td>{{n.netprice}}</td>
+    </table>
+</body>
+</html>

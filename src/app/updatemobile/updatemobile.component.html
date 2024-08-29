@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button (click)="goToViewPage()">Back to View Page</button>
+    <label>Enter Id : </label>
+    <input type="number" [(ngModel)]="mob.id">
+    <label>Enter Brand : </label>
+    <input type="text" [(ngModel)]="mob.brand">
+    <label>Enter Color : </label>
+    <input type="text" [(ngModel)]="mob.color">
+    <label>Enter Price : </label>
+    <input type="number" [(ngModel)]="mob.price" (ngModelChange)="calculateNetPrice()">
+    <label>Enter Discount : </label>
+    <input type="number" [(ngModel)]="mob.discount" (ngModelChange)="calculateNetPrice()">
+    <label>Enter Netprice : </label>
+    <input type="number" [(ngModel)]="mob.netprice" disabled>
+     
+    <button (click)="submitMobile()">Submit</button>
+    <p>Id: {{ mob.id }}</p>
+    <p>Brand: {{ mob.brand }}</p>
+    <p>Color: {{ mob.color }}</p>
+    <p>Price: {{ mob.price }}</p>
+    <p>Discount: {{ mob.discount }}</p>
+    <p>Netprice: {{ mob.netprice }}</p>
+</body>
+</html>
